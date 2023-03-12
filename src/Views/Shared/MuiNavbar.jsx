@@ -122,9 +122,12 @@ const MuiNavbar = ({ isDarkTheme, setIsDarkTheme }) => {
                         )} */}
 
                         <Tooltip title='Change theme'>
+                            <div>
+                            <Button style={{textTransform:'none'}} color='inherit'>Sign Up</Button>
                             <IconButton size="large" edge='end' onClick={changeTheme}>
                                 {isDarkTheme ? <Brightness5Icon /> : <DarkModeIcon />}
                             </IconButton>
+                            </div>
                         </Tooltip>
                     </Stack>
                 </Toolbar>
