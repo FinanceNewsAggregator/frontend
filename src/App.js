@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from 'react';
+import { createRouter } from './create-router'
 import './App.css';
+import { Box, CircularProgress } from '@mui/material';
+import { RouterProvider } from 'react-router-dom';
+
+const router = createRouter();
+
+ 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+                <React.Suspense fallback={<CircularProgress />}>
+                    <Box style={{ minWidth: '400px', minHeight: '400px' }}>
+                        <RouterProvider router={router} />
+                    </Box>
+                </React.Suspense>
+    );
 }
 
 export default App;
