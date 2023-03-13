@@ -1,29 +1,32 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import { Typography, TextField, Button, Divider, Stack, IconButton } from '@mui/material';
-import { Link } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 
-const SignUpPage = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-  
-    const handleEmailChange = (event) => {
-      setEmail(event.target.value);
-    };
-  
-    const handlePasswordChange = (event) => {
-      setPassword(event.target.value);
-    };
-  const handleSignUp = () => {
-    // do something with the user's email and password
-    if(email !="" && password!= ""){
-    console.log(`Email: ${email} | Password: ${password}`);
+const LogInPage = () => {
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
+
+const handleEmailChange = (event) => {
+  setEmail(event.target.value);
+};
+
+const handlePasswordChange = (event) => {
+  setPassword(event.target.value);
+};
+const handleSignUp = () => {
+// do something with the user's email and password
+if(email !="" && password!= ""){
+console.log(`Email: ${email} | Password: ${password}`);
 }
-  };
+};
   return (
+    
     <React.Fragment>
         <Box sx={{
         width: '25vw',
@@ -35,7 +38,7 @@ const SignUpPage = () => {
         backgroundColor: '#F5F5F5',
         marginTop: 15,
         borderRadius:5, border: 'solid 1px black', borderRadius: 2}} >
-            <Typography variant="h6" marginLeft={7} marginTop={5} align='left' color={'black'}>SIGN UP</Typography>
+            <Typography variant="h6" marginLeft={7} marginTop={5} align='left' color={'black'}>LOG IN</Typography>
             <Typography variant="h7" marginLeft={7} marginTop={1} align='left' color={'black'} textTransform='none'>Email</Typography>
             <Box sx={{display:'flex', justifyContent:'center'}}>
               <Box sx={{display:'flex', flexDirection:'column', width:'70%'}}>
@@ -74,6 +77,9 @@ const SignUpPage = () => {
                           },
                       }, input: { color: 'black' },
                 }}/>
+                <FormControlLabel control={<Checkbox sx={{color:'black','&.Mui-checked': {
+      color: 'black',
+    },}}/>} label="Remember me" sx={{color:'black'}}/>
                 </Box>
               </Box>
             <Box sx={{display:'flex', justifyContent:'center'}}>
@@ -92,7 +98,7 @@ const SignUpPage = () => {
                     <GoogleIcon style={{color:'black'}}/>
                 </IconButton>
                 </Stack> */}
-            <Button component={Link} to="/login" variant='text' sx={{color:'black', marginTop:2, textTransform:'none'}}> Already a user? Log In</Button>
+            <Button component={Link} to="/register" variant='text' sx={{color:'black', marginTop:2, textTransform:'none'}}>Need an account? Sign Up</Button>
             </Box>
         </Box>
       </Box>
@@ -100,4 +106,4 @@ const SignUpPage = () => {
   )
 }
 
-export default SignUpPage
+export default LogInPage

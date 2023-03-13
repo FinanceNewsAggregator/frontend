@@ -19,7 +19,12 @@ const LandingPage = () => {
           paddingTop: 15
         }}
       />
-      <Typography variant="h6" marginTop={1} align="center">More information in less time</Typography>
+      <Typography variant="h4" marginTop={1} align="center" sx={{wordWrap:'break-word'}}>Get the news that matters,</Typography>
+      <Typography variant="h4" align="center" sx={{wordWrap:'break-word'}}>Fast!</Typography>
+      <Typography variant="subtitle1" marginTop={1} align="center" sx={{wordWrap:'break-word'}}>We will always provide 
+      you with the latest and most important news, </Typography>
+      <Typography variant="subtitle1" align="center" sx={{wordWrap:'break-word'}}>
+        just like a best friend running a podcast who always has your back and keeps you informed about what's happening in the world</Typography>
       <Stack direction={'row'} style={{
           margin: "auto",
           height: "auto",
@@ -27,12 +32,13 @@ const LandingPage = () => {
           maxHeight: { xs: "20%", md: "20%" },
           maxWidth: { xs: "90%", md: "90%" },
           justifyContent: 'center',
-          marginBottom:10
+          marginBottom:10,
+          marginTop:10
         }}
         spacing={50}>
 
-      <Button style={{textTransform:'none', width:180}} variant="contained" color='primary'>Log In</Button>
-      <Button style={{textTransform:'none', width:180}} variant="contained" color='primary'>Register</Button>
+      <Button style={{textTransform:'none', width:180, borderRadius:10}} variant="contained" color='primary'>Log In</Button>
+      <Button style={{textTransform:'none', width:180, borderRadius:10}} variant="contained" color='primary'>Register</Button>
       </Stack>
     </React.Fragment>
   );

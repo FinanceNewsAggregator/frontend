@@ -7,6 +7,9 @@ export function createRouter() {
     const TagsPageLazy = React.lazy(() => import('./Views/TagsPage/TagsPage'));
     const SourcesPageLazy = React.lazy(() => import('./Views/SourcesPage/SourcesPage'));
     const SignUpPageLazy = React.lazy(() => import('./Views/SignUpPage/SignUpPage'));
+    const LogInPageLazy = React.lazy(() => import('./Views/LogInPage/LogInPage'));
+    const SummaryPageLazy = React.lazy(() => import('./Views/SummaryPage/SummaryPage'));
+    const SentimentalPageLazy = React.lazy(() => import('./Views/SentimentalPage/SentimentalPage'));
     const router = createBrowserRouter([
         {
             path: "/",
@@ -34,6 +37,18 @@ export function createRouter() {
                 {
                     path: "register",
                     element: <SignUpPageLazy />
+                },
+                {
+                    path: "login",
+                    element: <LogInPageLazy />
+                },
+                {
+                    path: "summary",
+                    element: <SummaryPageLazy />
+                },
+                {
+                    path: "sentimental",
+                    element: <SentimentalPageLazy />
                 },
             ]
         }

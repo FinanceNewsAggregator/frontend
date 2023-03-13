@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import MyButton from './MyButton';
+import { Link } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -59,7 +60,7 @@ const TagsPage = () => {
       </Grid>
 
       <Grid container justifyContent="center" marginTop={20}>
-        <Button variant='contained' sx={{textTransform:'none', width:120, height:40, borderRadius:8}}>Next</Button>
+        <Button component={Link} to="/sources" variant='contained' sx={{textTransform:'none', width:120, height:40, borderRadius:8}}>Next</Button>
       </Grid>
     </React.Fragment>
   );
