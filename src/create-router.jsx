@@ -4,6 +4,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 export function createRouter() {
     const RootPageLazy = React.lazy(() => import('./RootPage'));
     const LandingPageLazy = React.lazy(() => import('./Views/LandingPage/LandingPage'));
+    const TagsPageLazy = React.lazy(() => import('./Views/TagsPage/TagsPage'));
     const router = createBrowserRouter([
         {
             path: "/",
@@ -19,7 +20,11 @@ export function createRouter() {
                 {
                     path: "home",
                     element: <LandingPageLazy />
-                }
+                },
+                {
+                    path: "tags",
+                    element: <TagsPageLazy />
+                },
             ]
         }
     ]);

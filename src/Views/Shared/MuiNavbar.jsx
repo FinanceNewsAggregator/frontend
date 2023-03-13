@@ -121,9 +121,9 @@ const MuiNavbar = ({ isDarkTheme, setIsDarkTheme }) => {
                             </React.Fragment>
                         )} */}
 
+                        <Button style={{textTransform:'none'}} color='inherit'>Sign Up</Button>
                         <Tooltip title='Change theme'>
                             <div>
-                            <Button style={{textTransform:'none'}} color='inherit'>Sign Up</Button>
                             <IconButton size="large" edge='end' onClick={changeTheme}>
                                 {isDarkTheme ? <Brightness5Icon /> : <DarkModeIcon />}
                             </IconButton>
@@ -147,7 +147,7 @@ const MuiNavbar = ({ isDarkTheme, setIsDarkTheme }) => {
                     <Stack direction={'row'}>
                         
                             <React.Fragment>
-                                <Button className="stackBtn" color='inherit'>Είσοδος/Σύνδεση</Button>
+                                <Button className="stackBtn" color='inherit'>Log In/ Sign Up</Button>
                                 <Tooltip title='Change Language'>
                                     <IconButton size="large" edge='end'>
                                         <LanguageIcon />

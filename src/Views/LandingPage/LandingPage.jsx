@@ -31,8 +31,8 @@ const LandingPage = () => {
         }}
         spacing={50}>
 
-      <Button style={{textTransform:'none', width:180}} variant="contained" color='inherit'>Log In</Button>
-      <Button style={{textTransform:'none', width:180}} variant="contained" color='inherit'>Register</Button>
+      <Button style={{textTransform:'none', width:180}} variant="contained" color='primary'>Log In</Button>
+      <Button style={{textTransform:'none', width:180}} variant="contained" color='primary'>Register</Button>
       </Stack>
     </React.Fragment>
   );

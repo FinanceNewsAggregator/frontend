@@ -8,7 +8,7 @@ import { useState } from 'react';
 const light = createTheme({
     palette: {
         primary: {
-            main: '#E63946'
+            main: '#777a82'
         }, secondary: {
             main: '#FFFF'
         },
@@ -18,7 +18,7 @@ const light = createTheme({
 const dark = createTheme({
     palette: {
         primary: {
-            main: '#E63946'
+            main: '#cfc8c9'
         },
         mode: 'dark',
     },
