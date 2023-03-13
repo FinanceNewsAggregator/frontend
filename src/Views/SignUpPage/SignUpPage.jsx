@@ -17,10 +17,33 @@ const SignUpPage = () => {
     const handlePasswordChange = (event) => {
       setPassword(event.target.value);
     };
-  const handleSignUp = () => {
+  let handleSignUp = async (e) => {
     // do something with the user's email and password
     if(email !="" && password!= ""){
-    console.log(`Email: ${email} | Password: ${password}`);
+      e.preventDefault();
+      try {
+        let res = await fetch("https://donguillotine.pythonanywhere.com/register/", {
+          mode: 'no-cors',
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        });
+        let resJson = await res.json();
+        if (res.status === 200) {
+          setEmail("");
+          setPassword("");
+          console.log("User created!");
+        } else {
+          console.log("An error occured!");
+        }
+      } catch (err) {
+        console.log(err);
+      }
 }
   };
   return (

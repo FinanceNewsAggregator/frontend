@@ -121,7 +121,7 @@ const MuiNavbar = ({ isDarkTheme, setIsDarkTheme }) => {
                             </React.Fragment>
                         )} */}
 
-                        <Button style={{textTransform:'none'}} color='inherit'>Sign Up</Button>
+                        <Button component={Link} to="/login"style={{textTransform:'none'}} color='inherit'>Sign Up</Button>
                         <Tooltip title='Change theme'>
                             <div>
                             <IconButton size="large" edge='end' onClick={changeTheme}>

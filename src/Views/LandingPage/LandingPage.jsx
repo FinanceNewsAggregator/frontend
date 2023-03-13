@@ -1,6 +1,7 @@
 import React from "react";
 import { Paper, Box, Typography, Stack, Button } from "@mui/material";
 import { AspectRatio } from "@mui/icons-material";
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -37,8 +38,8 @@ const LandingPage = () => {
         }}
         spacing={50}>
 
-      <Button style={{textTransform:'none', width:180, borderRadius:10}} variant="contained" color='primary'>Log In</Button>
-      <Button style={{textTransform:'none', width:180, borderRadius:10}} variant="contained" color='primary'>Register</Button>
+      <Button component={Link} to="/login" style={{textTransform:'none', width:180, borderRadius:10}} variant="contained" color='primary'>Log In</Button>
+      <Button component={Link} to="/register" style={{textTransform:'none', width:180, borderRadius:10}} variant="contained" color='primary'>Register</Button>
       </Stack>
     </React.Fragment>
   );
