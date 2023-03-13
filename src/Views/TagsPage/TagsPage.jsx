@@ -18,19 +18,19 @@ function FormRow(props) {
   return (
     <React.Fragment>
       <Grid item xs={2}>
-        <MyButton hoverColor={hoverColor[0]} text={texts[0]}></MyButton>
+        <MyButton hoverColor={hoverColor[0]} text={texts[0]} width={120} height={50}></MyButton>
       </Grid>
       <Grid item xs={2}>
-        <MyButton hoverColor={hoverColor[1]} text={texts[1]}></MyButton>
+        <MyButton hoverColor={hoverColor[1]} text={texts[1]} width={120} height={50}></MyButton>
       </Grid>
       <Grid item xs={2}>
-        <MyButton hoverColor={hoverColor[2]} text={texts[2]}></MyButton>
+        <MyButton hoverColor={hoverColor[2]} text={texts[2]} width={120} height={50}></MyButton>
       </Grid>
       <Grid item xs={2}>
-        <MyButton hoverColor={hoverColor[3]} text={texts[3]}></MyButton>
+        <MyButton hoverColor={hoverColor[3]} text={texts[3]} width={120} height={50}></MyButton>
       </Grid>
       <Grid item xs={2}>
-        <MyButton hoverColor={hoverColor[4]} text={texts[4]}></MyButton>
+        <MyButton hoverColor={hoverColor[4]} text={texts[4]} width={120} height={50}></MyButton>
       </Grid>
     </React.Fragment>
   );
